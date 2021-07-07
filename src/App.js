@@ -6,9 +6,10 @@ import Homepage from './pages/homepage';
 
 
 const App = () => (
-    <Switch>
-        <Route path={'/'} component={Homepage} />
-    </Switch>
+    // <Switch>
+    //     <Route path={'/'} component={Homepage} />
+    // </Switch>
+    <p>Test</p>
 );
 
 export default App;

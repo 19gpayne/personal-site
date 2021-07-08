@@ -4,17 +4,20 @@ import { Link } from 'react-router-dom';
 
 import navList from './navlist';
 
-export const NavSide = styled.div`
-    top: 0px;
-    width: fit-content;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-color: #388484;
-    padding: 40px 30px;
-    @media screen and (max-width: 1088px) {
-        display: none;
+export const NavMenu = styled.div`
+    @media screen and (min-width: 1088px) {
+        display: none !important;
     }
+    ${props => props.status !== true} {
+        display: block;
+    }
+    ${props => props.status !== false} {display: none;}
+    padding: 30px 30px 0px 30px;
+    background-color: blue
+    @media screen and (max-width: 460px) {
+        padding: 30px 15px 0px 15px;
+    }
+    border-bottom: 1px solid blue;
 `;
 
 export const Button = styled.div`
@@ -54,8 +57,8 @@ export const NavButton = styled.div`
     padding: 5px;
 `;
 
-const NavPrimarySide = () => (
-    <NavSide>
+const NavMobile = () => (
+    <NavMenu>
         {navList.main.map((d, i) => {
             let status = "inactive";
             if(window.location.pathname.split("/")[1] === d.href.split("/")[1]) {
@@ -72,7 +75,7 @@ const NavPrimarySide = () => (
                 </NavButton>
             )
         })}
-    </NavSide>
+    </NavMenu>
 );        
 
-export default NavPrimarySide;
+export default NavMobile;

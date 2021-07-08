@@ -2,11 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 import PopUpWindow from '../containers/popupwindow';
-import NavPrimarySide from '../navbar/navside';
+import {StickyNoteLeft, StickyNoteRight} from '../containers/stickynote';
+import NavAll from '../navbar/navall';
 
 export const PageFull = styled.div`
-    margin-left: 250px;
-    width: calc(100% - 250px);
+    margin-left: 125px;
+    width: calc(100% - 125px);
     @media screen and (max-width: 1088px) {
         margin-left: 0px;
         width: 100%;
@@ -19,9 +20,11 @@ export const PageFull = styled.div`
 
 const Homepage = () => (
     <>
-        <NavPrimarySide />
+        <NavAll />
         <PageFull>
             <br />
+            <StickyNoteLeft color={'yellow'}/>
+            <StickyNoteRight color={'skyblue'} />
             <PopUpWindow/>
             <br />
             <br />

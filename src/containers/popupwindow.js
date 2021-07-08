@@ -11,7 +11,7 @@ export const Window = styled.div`
     color: blue;
     margin: 0px auto 15px auto;
     border-radius: 1px;
-    margin-top: 150px;
+    margin-top: 100px;
     @media screen and (max-width: 1088px) {
         width: calc(100% - 40px);
         padding: 10px;
@@ -65,11 +65,17 @@ export const Inline = styled.div`
     display: inline;
 `;
 
+export const ScreenSizeHidden = styled.div`
+    @media screen and (max-width: 460px) {
+        display: none;
+    }
+`;
+
 const PopUpWindow = () => (
     <Window>
         <ActionBar>
             <Inline><FolderFilled/> C:\\GWINDOWS\DESKTOP\MyWebsite</Inline>
-            <Action><MinusSquareFilled/><CloseSquareFilled/></Action> 
+            <Action><ScreenSizeHidden><MinusSquareFilled/><CloseSquareFilled/></ScreenSizeHidden></Action> 
         </ActionBar>
         <NameBox>GWENDOLYN PAYNE</NameBox>
     </Window>

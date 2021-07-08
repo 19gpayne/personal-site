@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
 
-import {StickyNoteWriting} from '../fonts/fonts';
-
 export const NoteLeft = styled.div`
     padding: 10px;
     background-color: ${props => props.color};
@@ -50,6 +48,9 @@ export const Text = styled.div`
     height: 100%;
     text-align: center;
     white-space: pre-line;
+    font-family: Covered By Your Grace;
+    font-size: 36px;
+    padding: 5px;
 `;
 
 export const StickyNoteLeft = ({color}) => (

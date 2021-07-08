@@ -1,11 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import PopUpWindow from '../common/popupwindowcomputer';
-import {StickyNoteLeft, StickyNoteRight} from '../common/stickynote';
 import NavAll from '../navbar/navall';
-
-import BottomBar from '../common/bottombar';
 
 export const PageFull = styled.div`
     margin-left: 125px;
@@ -18,6 +14,7 @@ export const PageFull = styled.div`
     top: 0px;
     position: absolute;
     bottom: 0;
+    z-index: 1;
 `;
 
 const Homepage = () => (
@@ -25,13 +22,9 @@ const Homepage = () => (
         <NavAll />
         <PageFull>
             <br />
-            <StickyNoteLeft color={'yellow'}/>
-            <StickyNoteRight color={'skyblue'} />
-            <PopUpWindow/>
             <br />
             <br />
         </PageFull>
-        <BottomBar />
     </>
 );
 

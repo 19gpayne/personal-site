@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import navList from './navlist';
 
 export const NavMenu = styled.div`
-    @media screen and (min-width: 1088px) {
+    @media screen and (min-width: 1024px) {
         display: none !important;
     }
     ${props => props.status !== true} {

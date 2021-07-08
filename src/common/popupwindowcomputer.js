@@ -8,16 +8,16 @@ export const Window = styled.div`
     background-color: #d3d3d3;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.6);
     width: calc(100% - 500px);
-    color: blue;
     margin: 0px auto 15px auto;
     border-radius: 1px;
     margin-top: 100px;
-    @media screen and (max-width: 1088px) {
+    @media screen and (max-width: 1024px) {
         width: calc(100% - 40px);
         padding: 10px;
     }
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 640px) {
         margin-top: 20px;
+        height: 400px;
     }
     z-index: 2;
     height: 500px;
@@ -28,7 +28,7 @@ export const ActionBar = styled.div`
     background-color: navy;
     color: white;
     text-align: left;
-    @media screen and (max-width: 1088px) {
+    @media screen and (max-width: 1024px) {
         padding: 10px;
     }
     z-index: 2;
@@ -37,9 +37,10 @@ export const ActionBar = styled.div`
 export const Action = styled.div`
     display: inline-block;
     vertical-align: bottom;
-    width: calc(100% - 290px);
+    width: calc(100% - 243px);
     text-align: right;
     z-index: 2;
+    color: #d3d3d3;
 `;
 
 export const NameBox = styled.div`
@@ -53,11 +54,11 @@ export const NameBox = styled.div`
     width: 100%;
     text-align: center;
     height: calc(100% - 80px);
-    font-size: xxx-large;
+    font-size: 60px;
     @media screen and (max-width: 460px) {
-        height: calc(100% - 150px);
         font-size: xx-large;
     }
+    font-family: VT323;
 `;
 
 
@@ -74,7 +75,7 @@ export const ScreenSizeHidden = styled.div`
 const PopUpWindow = () => (
     <Window>
         <ActionBar>
-            <Inline><FolderFilled/> C:\\GWINDOWS\DESKTOP\MyWebsite</Inline>
+            <Inline><FolderFilled/> C:\\GWINDOWS\DESKTOP\Site</Inline>
             <Action><ScreenSizeHidden><MinusSquareFilled/><CloseSquareFilled/></ScreenSizeHidden></Action> 
         </ActionBar>
         <NameBox>GWENDOLYN PAYNE</NameBox>

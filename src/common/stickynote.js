@@ -12,12 +12,19 @@ export const NoteLeft = styled.div`
     position: absolute;
     left: 50px;
     top: 50px;
-    @media screen and (max-width: 1088px) {
+    @media screen and (max-width: 1024px) {
         right: 100px;
         left: revert;
     }
-    @media screen and (max-width: 748px) {
+    @media only screen and (max-width: 640px) {
         display: none;
+    }
+    @media only screen and (max-width: 640px) and (min-height: 640px) {
+        display: revert;
+        right: 50px;
+        left: revert;
+        top: revert;
+        bottom: 100px;
     }
 `;
 
@@ -31,12 +38,13 @@ export const NoteRight = styled.div`
     height: 200px;
     position: absolute;
     right: 50px;
-    bottom: 50px;
-    @media screen and (max-width: 1088px) {
-        right: 100px;
-        left: revert;
+    top: 425px;
+    @media screen and (max-width: 1024px) {
+        left: 50px;
+        right: revert;
+        top: 425px;
     }
-    @media screen and (max-width: 748px) {
+    @media screen and (max-width: 640px) {
         display: none;
     }
 `;
@@ -49,13 +57,13 @@ export const Text = styled.div`
     text-align: center;
     white-space: pre-line;
     font-family: Covered By Your Grace;
-    font-size: 36px;
+    font-size: 30px;
     padding: 5px;
 `;
 
 export const StickyNoteLeft = ({color}) => (
     <NoteLeft color={color}>
-        <Text>Computer science student at Northeastern</Text>
+        <Text>Computer science student at Northeastern University</Text>
     </NoteLeft>
 );
 

@@ -1,33 +1,33 @@
 import React from 'react';
 
-import {IeOutlined, WindowsFilled, FolderFilled, MailFilled, FileWordOutlined} from '@ant-design/icons';
+import {IeOutlined, LaptopOutlined, FolderFilled, MailFilled, FileWordOutlined} from '@ant-design/icons';
 
 const navList = {
     main: [
         {
-            label: <>&nbsp;&nbsp;Home</>,
+            label: <>Home</>,
             href: "/",
-            icon: <>&nbsp;<WindowsFilled/></>
+            icon: <><LaptopOutlined/></>
         },
         {
-            label: <>&nbsp;&nbsp;About</>,
+            label: <>About</>,
             href: "/about",
-            icon: <>&nbsp;<IeOutlined/></>
+            icon: <><IeOutlined/></>
         },
         {
-            label: <>&nbsp;&nbsp;Resume</>,
+            label: <>Resume</>,
             href: "/resume",
-            icon: <>&nbsp;<FileWordOutlined/></>
+            icon: <><FileWordOutlined/></>
         },
         {
-            label: <>&nbsp;&nbsp;Projects</>,
+            label: <>Projects</>,
             href: "/projects",
-            icon: <>&nbsp;<FolderFilled/></>
+            icon: <><FolderFilled/></>
         },
         {
-            label: <>&nbsp;&nbsp;Contact</>,
+            label: <>Contact</>,
             href: "/contact",
-            icon: <>&nbsp;<MailFilled/></>
+            icon: <><MailFilled/></>
         },
     ]
 };

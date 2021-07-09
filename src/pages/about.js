@@ -1,31 +1,39 @@
 import React from 'react';
-import styled from 'styled-components';
 
+import PopUpWindow from '../common/popupwindowcomputer';
+import {StickyNoteLeft, StickyNoteRight} from '../common/stickynote';
 import NavAll from '../navbar/navall';
+import BottomBar from '../common/bottombar';
+import {PageFull} from './pagestyledcomponents';
 
-export const PageFull = styled.div`
-    margin-left: 125px;
-    width: calc(100% - 125px);
-    @media screen and (max-width: 1024px) {
-        margin-left: 0px;
-        width: 100%;
+class AboutPage extends React.Component {
+    state={"mobileActive": false};
+
+    componentDidMount() {
+        
     }
-    background-color: #388484;
-    top: 0px;
-    position: absolute;
-    bottom: 0;
-    z-index: 1;
-`;
 
-const Homepage = () => (
-    <>
-        <NavAll />
-        <PageFull>
-            <br />
-            <br />
-            <br />
-        </PageFull>
-    </>
-);
+    setMobileActive = async (status) => {
+        await this.setState({"mobileActive": status});
+    }
 
-export default Homepage;
+    render() {
+        return (
+            <>
+                <NavAll mobileActive={this.state.mobileActive}/>
+                <PageFull>
+                    <br />
+                    <StickyNoteLeft color={'pink'}/>
+                    <StickyNoteRight color={'skyblue'} />
+                    <PopUpWindow/>
+                    <br />
+                    <br />
+                </PageFull>
+                <BottomBar setMobileActive={this.setMobileActive} active={this.state.mobileActive} tabName={"Internet Explorer"}/>
+            </>
+        )
+    }
+};
+
+export default AboutPage;
+

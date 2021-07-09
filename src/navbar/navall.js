@@ -3,9 +3,9 @@ import React from 'react';
 import NavSide from '../navbar/navside';
 import NavMobile from '../navbar/navmobile';
 
-const NavAll = () => (
+const NavAll = ({mobileActive}) => (
     <>
-        <NavMobile/>
+        <NavMobile active={mobileActive}/>
         <NavSide/>
     </>
 );        

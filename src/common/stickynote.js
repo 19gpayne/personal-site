@@ -16,10 +16,7 @@ export const NoteLeft = styled.div`
         right: 100px;
         left: revert;
     }
-    @media only screen and (max-width: 640px) {
-        display: none;
-    }
-    @media only screen and (max-width: 640px) and (min-height: 640px) {
+    @media only screen and (max-width: 640px)  {
         display: revert;
         right: 50px;
         left: revert;

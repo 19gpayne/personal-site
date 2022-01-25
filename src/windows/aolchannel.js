@@ -36,7 +36,6 @@ export const Window = styled.div`
         margin-top: 20px;
     }
     z-index: 1;
-    height: fit-content;
     border-right: 2px solid black;
     border-top: 2px solid #dadada;
     border-left: 2px solid #dadada;
@@ -232,10 +231,11 @@ const Channel = () => (
             <br />
             <br />
             <NameBox style={{width: '100%', height: '275px'}}>
+                <br />
                 <img 
                     src="https://res.cloudinary.com/dou0q4ekk/image/upload/v1643048163/Screen_Shot_2022-01-24_at_1.05.41_PM_g66s3j.png" 
                     alt="Paint" 
-                    style={{margin: '5px auto', objectFit: 'cover', padding: '0px 0px 30px 30px'}}
+                    style={{margin: '5px auto', objectFit: 'contain'}}
                 />
             </NameBox>
         </div>

@@ -135,14 +135,14 @@ export const Button = styled.button`
 
 const projectList = [
     {"id": 1, "name": "Personal Website", "date": "2021/2022", "status": "In Progress", "img": "https://res.cloudinary.com/dou0q4ekk/image/upload/v1643059618/Screen_Shot_2022-01-24_at_4.21.59_PM_mn9zmc.png", "bio": "Designed and coded own personal website to showcase resume and contact information.", 'tags': ['ReactJS', 'JavaScript', 'HTML', 'CSS']},
-    {"id": 2, "name": "Reminder Bot (Discord)", "date": "2021/2022", "status": "In Progress", "img": "https://res.cloudinary.com/dou0q4ekk/image/upload/v1643075073/Screen_Shot_2022-01-24_at_8.44.15_PM_bbobjq.png", "bio": "Discord bot that allows users to set a reminder of a specific message up to 24 days later.", 'tags': ['ReactJS', 'Discord APIs']},
+    {"id": 2, "name": "Reminder Bot", "date": "2021/2022", "status": "In Progress", "img": "https://res.cloudinary.com/dou0q4ekk/image/upload/v1643075073/Screen_Shot_2022-01-24_at_8.44.15_PM_bbobjq.png", "bio": "Discord bot that allows users to set a reminder of a specific message up to 24 days later.", 'tags': ['ReactJS', 'Discord APIs']},
     {"id": 3, "name": "Spreadsheet Application", "date": 2021, "status": "Complete", "img": "https://res.cloudinary.com/dou0q4ekk/image/upload/v1643062263/image1_qlp1rs.png", "bio": "An digital interactive spreadsheet application, used for organizing budgets, creating financial reports, and other uses. The spreadsheet allows users to enter information into cells, reference cells, add/delete rows and columns, sum and average cell ranges, write mathematical formulas, and concatenate strings. Users can also filter and sort rows, create graphs, and separate text by a delimiter. Created for CS4530 at Northeastern University with Jared Rudnicki and Ethan Lam.", 'tags': ['ReactJS', 'TypeScript', 'HTML', 'CSS']},
     {"id": 4, "name": "Pantry Pal", "date": 2021, "status": "Complete", "img": "https://res.cloudinary.com/dou0q4ekk/image/upload/v1643072273/image1_pwmfxe.png", "bio": "A website to connect food pantries with people who want to donate by allowing organizations to list items they are in need of and donors to search which organizations need an item. Created for HackMIT 2021 with Kevin Zyskowski, Isabella Conner, and Spencer Solomon. Won 2nd place in the Microsoft Azure Challenge.", 'tags': ['ReactJS', 'JavaScript', 'HTML', 'CSS']},
     {"id": 5, "name": "Password Generator", "date": 2021, "status": "Complete", "img": "https://res.cloudinary.com/dou0q4ekk/image/upload/v1643075369/Screen_Shot_2022-01-24_at_8.48.58_PM_crcml5.png", "bio": "A program that generates secure, memorable passwords. Allows users to specify number of words, capitals, numbers, and symbols, as well as display a help message. Usage: ./main.py [-h] [-w WORDS] [-c CAPS] [-n NUMBERS] [-s SYMBOLS]. Created for CY2550 at Northeastern University with Kevin Zyskowski.", 'tags': ['Python']},
     {"id": 6, "name": "Walmart Innovation Website", "date": 2021, "status": "Complete", "img": "https://res.cloudinary.com/dou0q4ekk/image/upload/v1643071773/Screen_Shot_2022-01-24_at_7.49.20_PM_c4cgyk.png", "bio": "Designed and coded a website to display my idea for “Walmart’s next innovation” which is a smart shopping cart and compatible app. Won 1 of 14 scholarships from Walmart x Girls Who Code to attend the 2021 Grace Hopper Celebration.", 'tags': ['ReactJS', 'JavaScript', 'HTML', 'CSS']},
-    {"id": 7, "name": "Star Sign Bot (Twitter)", "date": 2020, "status": "Complete", "img": "https://res.cloudinary.com/dou0q4ekk/image/upload/v1643075585/Screen_Shot_2022-01-24_at_8.52.50_PM_lysyng.png", "bio": "Twitter bot that when tweeted at will try to guess your astrological sign.", 'tags': ['JavaScript', 'Twitter APIs']},
+    {"id": 7, "name": "Star Sign Bot", "date": 2020, "status": "Complete", "img": "https://res.cloudinary.com/dou0q4ekk/image/upload/v1643075585/Screen_Shot_2022-01-24_at_8.52.50_PM_lysyng.png", "bio": "Twitter bot that when tweeted at will try to guess your astrological sign.", 'tags': ['JavaScript', 'Twitter APIs']},
     {"id": 8, "name": "Minesweeper", "date": 2020, "status": "Complete", "img": "https://res.cloudinary.com/dou0q4ekk/image/upload/v1643075788/Screen_Shot_2022-01-24_at_6.03.43_PM_k56hgs.png", "bio": "A recreation of the classic game Minesweeper with the ability to specify board size, add and remove flags, and floodfill. Created for CS2510 at Northeastern University with Jessica Sokal.", 'tags': ['Java']},
-    {"id": 9, "name": "MNIST Number Identifier", "date": 2019, "status": "Complete", "img": "https://res.cloudinary.com/dou0q4ekk/image/upload/v1643065929/Screen_Shot_2022-01-24_at_6.11.53_PM_m8k2if.png", "bio": "A machine learning program to determine the closest match to a handwritten number using the MNIST dataset. Created for CS2500 at Northeastern University with Kevin Cam.", 'tags': ['Racket']},
+    {"id": 9, "name": "MNIST Identifier", "date": 2019, "status": "Complete", "img": "https://res.cloudinary.com/dou0q4ekk/image/upload/v1643065929/Screen_Shot_2022-01-24_at_6.11.53_PM_m8k2if.png", "bio": "A machine learning program to determine the closest match to a handwritten number using the MNIST dataset. Created for CS2500 at Northeastern University with Kevin Cam.", 'tags': ['Racket']},
 ]
 
 class FileManagement extends React.Component {
@@ -170,11 +170,11 @@ class FileManagement extends React.Component {
                     <Inline><FolderFilled/> File Management</Inline>
                     <Action><ScreenSizeHidden><MinusSquareFilled/><CloseSquareFilled/></ScreenSizeHidden></Action> 
                 </ActionBar>
-                <div style={{display: 'inline-flex', width: '100%', height: 'calc(100% - 80px)'}}>
-                    <NameBox style={{maxWidth: '33%', display: 'block'}}>
+                <div style={{display: 'inline-flex', width: '100%', height: 'calc(100% - 80px)', alignItems: 'stretch'}}>
+                    <NameBox style={{maxWidth: '33%', display: 'block', height: '100%', overflow: 'hidden'}}>
                         <table style={{width: '100%', height: 'fit-content'}}>
                             <tr>
-                                <HeaderCell>File Management (Local)</HeaderCell>
+                                <HeaderCell>File Management</HeaderCell>
                             </tr>
                         </table>
                         <br />
@@ -234,7 +234,7 @@ class FileManagement extends React.Component {
                     </NameBox>
                     <br />
                     <br />
-                    <NameBox style={{display: 'block', overflow: 'auto'}}>
+                    <NameBox style={{display: 'block', overflowX: 'auto', overflowY: this.state.viewProject ? 'auto' : 'hidden', height: '100%'}}>
                         {this.state.viewProject ? 
                             <>
                                 <table>

@@ -17,6 +17,7 @@ export const Window = styled.div`
     top: 0;
     bottom: 0;
     text-align: center;
+    height: 80%;
     @media screen and (max-width: 1200px) {
         width: 20%;
     }
@@ -33,7 +34,6 @@ export const Window = styled.div`
         margin-top: 20px;
     }
     z-index: 3;
-    height: fit-content;
     border-right: 2px solid black;
     border-top: 2px solid #dadada;
     border-left: 2px solid #dadada;

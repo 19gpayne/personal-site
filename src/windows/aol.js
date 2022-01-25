@@ -118,15 +118,17 @@ export const ChatMessage = styled.textarea`
         width: calc(100% - 20px);
     }
     border: 2px solid gray;
+    display: block;
+    margin: 0 auto;
 `;
 
 export const Button = styled.input`
-    background-color: #226dab;
-    padding: 7px 22px;
-    color: white;
-    border: 0;
-    box-shadow: 3px 3px 3px rgba(33,33,33,1);
-    cursor: pointer;
+    background-color: #226dab !important;
+    padding: 7px 22px !important;
+    color: white !important;
+    border: 0 !important;
+    box-shadow: 3px 3px 3px rgba(33,33,33,1) !important;
+    cursor: pointer !important;
 `;
 
 class MOL extends React.Component {

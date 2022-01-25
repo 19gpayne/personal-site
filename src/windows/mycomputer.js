@@ -1,18 +1,11 @@
 import React from 'react';
-import styled, {keyframes} from "styled-components";
+import styled from "styled-components";
 
-import {CloseSquareFilled, MinusSquareFilled, FolderFilled} from '@ant-design/icons';
+import {FolderFilled} from '@ant-design/icons';
 
-const expand = keyframes`
-  from {
-    transform: scale(0.01, 0.01);
-  }
-  to {
-    transform: scale(1, 1);
-  }
-`;
+import { expand, WindowHeaderBar } from './windowsstyledcomponents';
 
-export const Window = styled.div`
+const Window = styled.div`
     padding: 10px;
     background-color: #d3d3d3;
     width: calc(100% - 500px);
@@ -41,32 +34,7 @@ export const Window = styled.div`
     font-family: Share Tech Mono;
 `;
 
-export const ActionBar = styled.div`
-    padding: 5px;
-    background-color: #0c1c6c;
-    color: white;
-    text-align: left;
-    width: calc(100% - 10px);
-    @media screen and (max-width: 1024px) {
-        padding: 10px;
-        width: calc(100% - 20px);
-    }
-    z-index: 2;
-    display: inline-flex;
-    
-    justify-content: space-between;
-`;
-
-export const Action = styled.div`
-    display: inline-block;
-    vertical-align: bottom;
-    width: calc(100% - 275px);
-    text-align: right;
-    z-index: 2;
-    color: #d3d3d3;
-`;
-
-export const NameBox = styled.div`
+const NameBox = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,23 +54,9 @@ export const NameBox = styled.div`
     font-family: VT323;
 `;
 
-
-export const Inline = styled.div`
-    display: inline;
-`;
-
-export const ScreenSizeHidden = styled.div`
-    @media screen and (max-width: 460px) {
-        display: none;
-    }
-`;
-
 const MyComputer = () => (
     <Window>
-        <ActionBar>
-            <Inline><FolderFilled/> C:\\GWENDOWS\DESKTOP\Site</Inline>
-            <Action><ScreenSizeHidden><MinusSquareFilled/><CloseSquareFilled/></ScreenSizeHidden></Action> 
-        </ActionBar>
+        <WindowHeaderBar label={<><FolderFilled/> C:\\GWENDOWS\DESKTOP\Site</>}/>
         <NameBox>GWENDOLYN PAYNE</NameBox>
     </Window>
 );

@@ -5,7 +5,6 @@ import {
     LaptopOutlined, 
     FolderFilled, 
     MailFilled, 
-    //FileWordOutlined
 } from '@ant-design/icons';
 
 const navList = {
@@ -20,11 +19,6 @@ const navList = {
             href: "/about",
             icon: <><IeOutlined/></>
         },
-        // {
-        //     label: <>Resume</>,
-        //     href: "/resume",
-        //     icon: <><FileWordOutlined/></>
-        // },
         {
             label: <>Projects</>,
             href: "/projects",

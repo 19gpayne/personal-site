@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 
-export const NoteLeft = styled.div`
+const NoteLeft = styled.div`
     padding: 10px;
     background-color: ${props => props.color};
     box-shadow: 5px 5px 7px rgba(33,33,33,.7);
@@ -36,7 +36,7 @@ export const NoteLeft = styled.div`
     }
 `;
 
-export const NoteRight = styled.div`
+const NoteRight = styled.div`
     padding: 10px;
     background-color: ${props => props.color};
     box-shadow: -5px 5px 7px rgba(33,33,33,.7);
@@ -57,27 +57,7 @@ export const NoteRight = styled.div`
     }
 `;
 
-export const NoteRight2 = styled.div`
-    padding: 10px;
-    background-color: ${props => props.color};
-    box-shadow: -5px 5px 7px rgba(33,33,33,.7);
-    z-index: 4;
-    transform: rotate(-3deg);
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    right: 75px;
-    top: 50px;
-    @media only screen and (max-width: 640px) {
-        top: 25px;
-        right: 5px;
-        width: 150px;
-        height: 150px;
-        font-size: 15px;
-    }
-`;
-
-export const Text = styled.div`
+const Text = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,16 +94,4 @@ export const StickyNoteRight = ({color}) => (
             Software Engineer
         </Text>
     </NoteRight>
-);
-
-export const StickyNote3 = ({color}) => (
-    <NoteRight2 color={color}>
-        <Text>
-            FULL NAME: Gwendolyn Payne
-            <br/>
-            BIRTH DATE: March 27, 2001
-            <br/>
-            EMAIL: payne.gw@northeastern.edu
-        </Text>
-    </NoteRight2>
 );

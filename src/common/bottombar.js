@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import {AppstoreFilled} from '@ant-design/icons';
 
-export const Window = styled.div`
+const Window = styled.div`
     background-color: #d3d3d3;
     box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.2);
     width: 100%;
@@ -14,7 +14,7 @@ export const Window = styled.div`
     left: 0;
 `;
 
-export const ActionBar = styled.div`
+const ActionBar = styled.div`
     padding: 10px;
     background-color: #d3d3d3;
     color: black;
@@ -25,15 +25,7 @@ export const ActionBar = styled.div`
     z-index: 2;
 `;
 
-export const Action = styled.div`
-    display: inline-block;
-    vertical-align: bottom;
-    width: calc(100% - 290px);
-    text-align: right;
-    z-index: 2;
-`;
-
-export const Inline = styled.div`
+const Inline = styled.div`
     display: inline;
     padding: 5px;
     font-family: VT323;
@@ -57,7 +49,7 @@ export const Inline = styled.div`
     }
 `;
 
-export const InlineTab = styled.div`
+const InlineTab = styled.div`
     display: inline-flex;
     padding: 5px;
     box-shadow: inset 2px 2px 2px rgb(0 0 0 / 40%);

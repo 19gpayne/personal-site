@@ -1,18 +1,11 @@
 import React from 'react';
-import styled, {keyframes} from "styled-components";
+import styled from "styled-components";
 
-import {CloseSquareFilled, MinusSquareFilled, FileImageFilled} from '@ant-design/icons';
+import {FileImageFilled} from '@ant-design/icons';
 
-const expand = keyframes`
-  from {
-    transform: scale(0.01, 0.01);
-  }
-  to {
-    transform: scale(1, 1);
-  }
-`;
+import { expand, WindowHeaderBar } from './windowsstyledcomponents';
 
-export const Window = styled.div`
+const Window = styled.div`
     padding: 10px;
     background-color: #d3d3d3;
     width: calc(100% - 500px);
@@ -45,42 +38,14 @@ export const Window = styled.div`
     
 `;
 
-export const ActionBar = styled.div`
-    padding: 5px;
-    background-color: #0c1c6c;
-    color: white;
-    text-align: left;
-    width: calc(100% - 10px);
-    @media screen and (max-width: 1024px) {
-        padding: 10px;
-        width: calc(100% - 20px);
-    }
-    z-index: 2;
-    display: inline-flex;
-    
-    justify-content: space-between;
-`;
-
-export const Action = styled.div`
-    display: inline-block;
-    vertical-align: bottom;
-    width: calc(100% - 243px);
-    text-align: right;
-    z-index: 2;
-    color: #d3d3d3;
-`;
-
-export const NameBox = styled.div`
+const NameBox = styled.div`
     display: flex;
-    // justify-content: center;
-    // align-items: center;
     background-color: white;
     color: black;
     box-shadow: inset 2px 2px 2px rgb(0 0 0 / 50%);
     border-bottom: 2px solid #d9d9d9;
     border-right: 2px solid #d9d9d9;
     margin-top: 10px;
-    // text-align: center;
     height: calc(100% - 100px);
     font-size: 30px;
     @media screen and (max-width: 460px) {
@@ -90,7 +55,7 @@ export const NameBox = styled.div`
     overflow: auto;
 `;
 
-export const AddressBar = styled.div`
+const AddressBar = styled.div`
     padding: 5px;
     margin-top: 10px;
     background-color: white;
@@ -102,22 +67,7 @@ export const AddressBar = styled.div`
     border-right: 2px solid #d9d9d9;
 `;
 
-
-export const Inline = styled.div`
-    display: inline;
-`;
-
-export const ScreenSizeHidden = styled.div`
-    @media screen and (max-width: 460px) {
-        display: none;
-    }
-`;
-
-export const Wiki = styled.div`
-    padding: 10px;
-`;
-
-export const Rectangle = styled.div`
+const Rectangle = styled.div`
     background-color: #d3d3d3;
     height: 40%;
     width: 100%;
@@ -126,10 +76,7 @@ export const Rectangle = styled.div`
 
 const MyComputer = () => (
     <Window>
-        <ActionBar>
-            <Inline><FileImageFilled/> GSN.com</Inline>
-            <Action><ScreenSizeHidden><MinusSquareFilled/><CloseSquareFilled/></ScreenSizeHidden></Action> 
-        </ActionBar>
+        <WindowHeaderBar label={<><FileImageFilled/> GSN.com</>}/>
         <br />
         <AddressBar>
             Address: www.about-me.net

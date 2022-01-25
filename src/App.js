@@ -5,7 +5,6 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import Homepage from './pages/homepage';
 import About from './pages/about';
 import Projects from './pages/projects';
-import Resume from './pages/resume'
 import Contact from './pages/contact';
 
 
@@ -17,9 +16,6 @@ const App = () => (
         <Route path="/about">
             <About/>
         </Route>
-        <Route path="/resume">
-            <Resume/>
-        </Route> 
         <Route path="/projects">
             <Projects/>
         </Route> 

@@ -1,18 +1,11 @@
 import React from 'react';
-import styled, {keyframes} from "styled-components";
+import styled from "styled-components";
 
 import {CloseSquareFilled, MinusSquareFilled, FileImageFilled, BgColorsOutlined, HighlightOutlined, ZoomInOutlined, ZoomOutOutlined, FontColorsOutlined, ScissorOutlined, DragOutlined, SearchOutlined, FullscreenOutlined, QuestionOutlined, BorderOutlined, LineOutlined, FontSizeOutlined, SnippetsOutlined} from '@ant-design/icons';
 
-const expand = keyframes`
-  from {
-    transform: scale(0.01, 0.01);
-  }
-  to {
-    transform: scale(1, 1);
-  }
-`;
+import { expand, Inline, ScreenSizeHidden } from './windowsstyledcomponents';
 
-export const Window = styled.div`
+const Window = styled.div`
     padding: 10px;
     background-color: #d3d3d3;
     width: calc(100% - 800px);
@@ -49,7 +42,7 @@ export const Window = styled.div`
     
 `;
 
-export const ActionBar = styled.div`
+const ActionBar = styled.div`
     padding: 5px;
     background-color: #0c1c6c;
     color: white;
@@ -65,7 +58,7 @@ export const ActionBar = styled.div`
     justify-content: space-between;
 `;
 
-export const Action = styled.div`
+const Action = styled.div`
     display: inline-block;
     vertical-align: bottom;
     width: calc(100% - 175px);
@@ -74,17 +67,14 @@ export const Action = styled.div`
     color: #d3d3d3;
 `;
 
-export const NameBox = styled.div`
+const NameBox = styled.div`
     display: flex;
-    // justify-content: center;
-    // align-items: center;
     background-color: white;
     color: black;
     box-shadow: inset 2px 2px 2px rgb(0 0 0 / 50%);
     border-bottom: 2px solid #d9d9d9;
     border-right: 2px solid #d9d9d9;
     margin-top: 10px;
-    // text-align: center;
     height: calc(100% - 100px);
     font-size: 30px;
     @media screen and (max-width: 460px) {
@@ -94,41 +84,18 @@ export const NameBox = styled.div`
     overflow: hidden;
 `;
 
-export const AddressBar = styled.div`
-    padding: 5px;
-    margin-top: 10px;
-    background-color: white;
-    color: black;
-    text-align: left;
-    z-index: 2;
-    box-shadow: inset 2px 2px 2px rgb(0 0 0 / 50%);
-    border-bottom: 2px solid #d9d9d9;
-    border-right: 2px solid #d9d9d9;
-`;
-
-
-export const Inline = styled.div`
-    display: inline;
-`;
-
-export const ScreenSizeHidden = styled.div`
-    @media screen and (max-width: 460px) {
-        display: none;
-    }
-`;
-
-export const Dot = styled.td`
+const Dot = styled.td`
     background-color: #000;
     border-radius: 50%;
     display: inline-block;
 `;
 
-export const Square = styled.td`
+const Square = styled.td`
     background-color: #000;
     display: inline-block;
 `;
 
-export const HeaderCell = styled.td`
+const HeaderCell = styled.td`
     background-color: #d3d3d3;
     border-right: 2px solid black;
     border-top: 2px solid #dadada;
@@ -139,7 +106,7 @@ export const HeaderCell = styled.td`
     text-align: center;
 `;
 
-export const ColorCell = styled.td`
+const ColorCell = styled.td`
     box-shadow: inset 2px 2px 2px rgb(0 0 0 / 40%);
     border-top: revert;
     border-left: revert;
@@ -203,7 +170,7 @@ const darkColorList = [
 ]
 
 
-const Channel = () => (
+const Paint = () => (
     <Window>
         <ActionBar>
             <Inline><FileImageFilled/> untitled - Paint</Inline>
@@ -262,4 +229,4 @@ const Channel = () => (
     </Window>
 );
 
-export default Channel
+export default Paint

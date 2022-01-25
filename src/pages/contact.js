@@ -5,7 +5,7 @@ import BottomBar from '../common/bottombar';
 import {PageFull} from './pagestyledcomponents';
 import AOL from '../windows/aol';
 import Guide from '../windows/guide';
-import Channel from '../windows/aolchannel';
+import Paint from '../windows/paint';
 
 class Homepage extends React.Component {
     state={"mobileActive": false};
@@ -26,7 +26,7 @@ class Homepage extends React.Component {
                     <br />
                     <AOL />
                     <Guide />
-                    <Channel />
+                    <Paint />
                     <br />
                     <br />
                 </PageFull>

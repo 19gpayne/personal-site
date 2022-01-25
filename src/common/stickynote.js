@@ -85,10 +85,13 @@ export const Text = styled.div`
     text-align: center;
     white-space: pre-line;
     font-family: Covered By Your Grace;
-    font-size: 2.2vw;
+    font-size: 1.8vw;
     padding: 5px;
+    @media only screen and (max-width: 1024px) {
+        font-size: 3vw;
+    }
     @media only screen and (max-width: 640px) {
-        font-size: 6vw;
+        font-size: 5.5vw;
     }
 `;
 

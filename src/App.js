@@ -1,9 +1,12 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 /* Containers */
 import Homepage from './pages/homepage';
 import About from './pages/about';
+import Projects from './pages/projects';
+import Resume from './pages/resume'
+import Contact from './pages/contact';
 
 
 const App = () => (
@@ -13,6 +16,18 @@ const App = () => (
         </Route>    
         <Route path="/about">
             <About/>
+        </Route>
+        <Route path="/resume">
+            <Resume/>
+        </Route> 
+        <Route path="/projects">
+            <Projects/>
+        </Route> 
+        <Route path="/contact">
+            <Contact/>
+        </Route>  
+        <Route path="*">
+            <Redirect to="/" />
         </Route>   
     </Switch>
 );

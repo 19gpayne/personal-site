@@ -1,10 +1,10 @@
 import React from 'react';
 
-import PopUpWindow from '../common/popupwindowcomputer';
-import {StickyNoteLeft, StickyNoteRight} from '../common/stickynote';
+import InternetExplorer from '../windows/internetexplorer';
 import NavAll from '../navbar/navall';
 import BottomBar from '../common/bottombar';
 import {PageFull} from './pagestyledcomponents';
+import Solitaire from '../windows/solitaire';
 
 class AboutPage extends React.Component {
     state={"mobileActive": false};
@@ -23,13 +23,12 @@ class AboutPage extends React.Component {
                 <NavAll mobileActive={this.state.mobileActive}/>
                 <PageFull>
                     <br />
-                    <StickyNoteLeft color={'pink'}/>
-                    <StickyNoteRight color={'skyblue'} />
-                    <PopUpWindow/>
+                    <InternetExplorer/>
+                    <Solitaire />
                     <br />
                     <br />
                 </PageFull>
-                <BottomBar setMobileActive={this.setMobileActive} active={this.state.mobileActive} tabName={"Internet Explorer"}/>
+                <BottomBar setMobileActive={this.setMobileActive} active={this.state.mobileActive} tabNames={["Internet Explorer"]}/>
             </>
         )
     }

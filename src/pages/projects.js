@@ -1,12 +1,11 @@
 import React from 'react';
 
-import MyComputer from '../windows/mycomputer';
-import {StickyNoteLeft, StickyNoteRight} from '../common/stickynote';
 import NavAll from '../navbar/navall';
 import BottomBar from '../common/bottombar';
 import {PageFull} from './pagestyledcomponents';
+import ComputerManagement from '../windows/filesystem';
 
-class Homepage extends React.Component {
+class Projects extends React.Component {
     state={"mobileActive": false};
 
     componentDidMount() {
@@ -23,16 +22,14 @@ class Homepage extends React.Component {
                 <NavAll mobileActive={this.state.mobileActive}/>
                 <PageFull>
                     <br />
-                    <StickyNoteLeft color={'yellow'}/>
-                    <StickyNoteRight color={'skyblue'} />
-                    <MyComputer/>
+                    <ComputerManagement/>
                     <br />
                     <br />
                 </PageFull>
-                <BottomBar setMobileActive={this.setMobileActive} active={this.state.mobileActive} tabNames={["My Computer"]}/>
+                <BottomBar setMobileActive={this.setMobileActive} active={this.state.mobileActive} tabNames={["File Management"]}/>
             </>
         )
     }
 };
 
-export default Homepage;
+export default Projects;

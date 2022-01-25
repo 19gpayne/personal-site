@@ -10,9 +10,9 @@ export const MobileMenu = styled.div`
     @media screen and (min-width: 1025px) {
         display: none !important;
     }
-    @media only screen and (max-width: 1024px) and (min-height: 1024px) and (min-width: 640px) {
-        display: none !important;
-    }
+    // @media only screen and (max-width: 1024px) and (min-height: 1024px) and (min-width: 640px) {
+    //     display: none !important;
+    // }
     ${props => props.status !== true} {
         display: block;
     }
@@ -38,17 +38,17 @@ export const NavSide = styled.div`
     @media screen and (max-width: 1024px) {
         display: none;
     }
-    @media only screen and (max-width: 1024px) and (min-height: 1024px) and (min-width: 640px) {
-        display: flex;
-        top: revert;
-        bottom: 200px;
-        left: 0;
-        width: 100%;
-        height: 100px;
-        padding: 0;
-        justify-content: center;
-        align-items: center;
-    }
+    // @media only screen and (max-width: 1024px) and (min-height: 1024px) and (min-width: 640px) {
+    //     display: flex;
+    //     top: 30px;
+    //     bottom: revert;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100px;
+    //     padding: 0;
+    //     justify-content: center;
+    //     align-items: center;
+    // }
     z-index: 2;
 `;
 

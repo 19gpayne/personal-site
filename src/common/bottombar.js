@@ -12,7 +12,6 @@ export const Window = styled.div`
     position: fixed;
     bottom: 0;
     left: 0;
-
 `;
 
 export const ActionBar = styled.div`
@@ -48,10 +47,10 @@ export const Inline = styled.div`
     }
     ${props => props.active !== false} {
         box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.2);
+        border-right: 2px solid gray;
         border-top: 2px solid #dadada;
         border-left: 2px solid #dadada;
-        border-bottom: revert;
-        border-right: revert;
+        border-bottom: 2px solid gray;
     }
     @media screen and (max-width: 1024px) {
         cursor: pointer;
@@ -62,19 +61,24 @@ export const InlineTab = styled.div`
     display: inline-flex;
     padding: 5px;
     box-shadow: inset 2px 2px 2px rgb(0 0 0 / 40%);
-    border-bottom: 2px solid #dbdbdb;
-    border-right: 2px solid #dbdbdb;
+    border-bottom: 2px solid #d9d9d9;
+    border-right: 2px solid #d9d9d9;
     font-family: VT323;
     font-size: 20px;
     width: 175px;
+    background-color: #dddddd;
 `;
 
-const BottomBar = ({setMobileActive, active, tabName}) => (
+const BottomBar = ({setMobileActive, active, tabNames}) => (
     <Window>
         <ActionBar>
             <Inline active={active} onClick={() => {return setMobileActive(!active)}}><AppstoreFilled/> Start</Inline>
             &nbsp;&nbsp;&nbsp;
-            <InlineTab>&nbsp;{tabName}</InlineTab>
+            {tabNames.map((t, i) => {
+                return (
+                    <InlineTab key={i}>&nbsp;{t}</InlineTab>
+                )
+            })}
         </ActionBar>
     </Window>
 );

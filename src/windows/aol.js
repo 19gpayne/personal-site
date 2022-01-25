@@ -108,7 +108,7 @@ export const ChatMessage = styled.textarea`
     height: 100px;
     width: fit-content;
     resize: none;
-    background-color: white;
+    background-color: white !important;
     padding: 5px;
     border-radius: 5px;
     outline: none;

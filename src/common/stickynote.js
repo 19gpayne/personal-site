@@ -85,7 +85,7 @@ export const Text = styled.div`
     text-align: center;
     white-space: pre-line;
     font-family: Covered By Your Grace;
-    font-size: 25px;
+    font-size: 2.2vw;
     padding: 5px;
 `;
 

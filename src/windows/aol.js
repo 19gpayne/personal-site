@@ -115,12 +115,13 @@ export const ChatMessage = styled.textarea`
     width: calc(100% - 14px);
     @media screen and (max-width: 1024px) {
         padding: 10px;
-        width: calc(100% - 20px);
+        width: calc(100% - 24px);
     }
     border: 2px solid gray;
     display: block;
     margin: 0 auto;
     -webkit-appearance: none;
+    opacity: 1;
 `;
 
 export const Button = styled.input`
@@ -128,6 +129,7 @@ export const Button = styled.input`
     padding: 7px 22px !important;
     color: white !important;
     border: 0 !important;
+    border-radius: 0 !important;
     box-shadow: 3px 3px 3px rgba(33,33,33,1) !important;
     cursor: pointer !important;
     -webkit-appearance: none;

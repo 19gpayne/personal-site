@@ -142,19 +142,31 @@ class MOL extends React.Component {
           this.setState({contactNumber: "000000" + (Math.random() * 1000000 | 0)})
       }
 
-      onSubmit(e) {
+      onSubmit = async (e) => {
         e.preventDefault();
 
-        sendForm('default_service', 'template_4oboe8f', '#contact-form')
+        console.log(this.state)
+        let msg = ''
+        let err = ''
+
+        await sendForm('default_service', 'template_4oboe8f', '#contact-form')
             .then(function(response) {
-            console.log('SUCCESS!', response.status, response.text);
-            const msg = {name: document.getElementById('user_name').value, message: document.getElementById('message').value}
-            this.setState({"messageList": [...this.state.messageList, msg]})
-            document.getElementById('contact-form').reset();
+                console.log('SUCCESS!', response.status, response.text);
+                msg = {name: document.getElementById('user_name').value, message: document.getElementById('message').value}
+                document.getElementById('contact-form').reset();
             }, function(error) {
-            console.log('FAILED...', error);
-            this.setState({'error': error})
-            });
+                console.log('FAILED...', error);
+                err = error
+            }
+        );
+
+        if (err !== '') {
+            this.setState({"error": err})
+        }
+
+        if (msg !== '') {
+            this.setState({"messageList": [...this.state.messageList, msg]})
+        }
         
       }
 

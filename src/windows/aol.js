@@ -182,7 +182,7 @@ class MOL extends React.Component {
             <ChatMessage 
                 disabled 
                 value={
-                    "xgwenpaynex: how are you :-)\nxgwenpaynex: send me a message!"
+                    "xgwenpaynex: how are you :-)\nxgwenpaynex: send me a message! (i'll e-mail you back)"
                     + this.state.messageList.map(m => {return "\n" + m.name + ": " + m.message})
                 } 
             />

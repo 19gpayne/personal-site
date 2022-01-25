@@ -275,7 +275,7 @@ class FileManagement extends React.Component {
                                 </tr>
                                 {projectList.map((p, i) => {
                                     return (
-                                        <tr key={i} style={{padding: '5px', cursor: 'default'}} onDoubleClick={() => {return this.setState({project: p, viewProject: true})}}>
+                                        <tr key={i} style={{padding: '5px', cursor: 'default'}} onClick={() => {return this.setState({project: p, viewProject: true})}}>
                                             <SpacedCell>{p.name}</SpacedCell>
                                             <SpacedCell style={{padding: '5px'}}>{p.date}</SpacedCell>
                                             <SpacedCell style={{padding: '5px'}}>{p.status}</SpacedCell>

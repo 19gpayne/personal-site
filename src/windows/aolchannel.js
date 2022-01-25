@@ -235,7 +235,7 @@ const Channel = () => (
                 <img 
                     src="https://res.cloudinary.com/dou0q4ekk/image/upload/v1643048163/Screen_Shot_2022-01-24_at_1.05.41_PM_g66s3j.png" 
                     alt="Paint" 
-                    style={{margin: '5px auto', objectFit: 'contain'}}
+                    style={{margin: '5px auto', objectFit: 'contain', width: '100%'}}
                 />
             </NameBox>
         </div>

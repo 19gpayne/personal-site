@@ -106,7 +106,7 @@ const Solitaire = () => (
             <Inline><FolderFilled/> Solitaire</Inline>
             <Action><ScreenSizeHidden><MinusSquareFilled/><CloseSquareFilled/></ScreenSizeHidden></Action> 
         </ActionBar>
-        <img src="https://st2.depositphotos.com/3962531/6433/v/450/depositphotos_64338591-stock-illustration-deck-of-cards.jpg" alt="Solitaire" width='100%'/>
+        <img src="https://res.cloudinary.com/dou0q4ekk/image/upload/v1643122730/Screen_Shot_2022-01-25_at_9.58.27_AM_wmzil4.png" alt="Solitaire" width='100%'/>
     </Window>
 );
 

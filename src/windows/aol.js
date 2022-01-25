@@ -120,6 +120,7 @@ export const ChatMessage = styled.textarea`
     border: 2px solid gray;
     display: block;
     margin: 0 auto;
+    -webkit-appearance: none;
 `;
 
 export const Button = styled.input`
@@ -129,6 +130,7 @@ export const Button = styled.input`
     border: 0 !important;
     box-shadow: 3px 3px 3px rgba(33,33,33,1) !important;
     cursor: pointer !important;
+    -webkit-appearance: none;
 `;
 
 class MOL extends React.Component {

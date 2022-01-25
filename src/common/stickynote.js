@@ -87,6 +87,9 @@ export const Text = styled.div`
     font-family: Covered By Your Grace;
     font-size: 2.2vw;
     padding: 5px;
+    @media only screen and (max-width: 640px) {
+        font-size: 6vw;
+    }
 `;
 
 export const StickyNoteLeft = ({color}) => (

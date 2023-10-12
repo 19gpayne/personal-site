@@ -87,19 +87,23 @@ const MyComputer = () => (
                 Gwendolyn&nbsp;Payne
             </div>
             <div style={{fontSize: '20px', padding: '10px', borderLeft: '1px solid gray'}}>
-                I am a third year student in the Honors program at Northeastern University, majoring in <b>Computer Science</b> with a 
+                I am a fifth year student in the Honors program at Northeastern University, majoring in <b>Computer Science</b> with a 
                 concentration in human-centered computing. I am passionate about using technology to help others and 
-                facilitate accessibility. After graduation, I will use my experience with <b>fullstack development, information 
-                technology, teaching, and mentoring</b> to become a well-rounded software engineer.
-                <br />
-                <br />
-                In addition to being a full-time student, I am also working as a <b>teaching assistant</b> for the course 
-                <i> Fundamentals of Software Engineering</i> and as a <b>junior developer</b> at Willow, a financial 
-                technology startup. I am also involved in an on-campus club that promotes diversity in STEM, 
-                First Byte. After a semester of active participation, I was selected to be the <b>Website Team Lead</b> for the club.
-                <br />
-                <br />
-                When I am not coding, I can be found playing word games, listening to podcasts, or chasing my cat, Booger. 
+                facilitate accessibility. <br /><br />
+                In addition to being a student, I am currently working as a lead front-end developer at 
+                <a href="www.tadpoletutoring.org">Tadpole Tutoring</a>, a tutoring software startup. I am currently
+                leading a team of 2 to add a new scheduling and payroll system. <br /><br />
+                I have also completed three co-ops, each as a full-stack developer.<br /><br />
+                My first co-op was at Willow, a fintech startup focusing on making financial advising more accessible
+                to women and the new majority. I worked on creating a document sharing vault, video conferencing system,
+                and redesigned and implemented the coaching dashboard homepage. These were completed using 
+                React and Django.<br /><br />
+                My second co-op was at Reprise, a demo software company, where I used Vue and Django. I worked on various visual redesigns, as well as
+                adding additional security measures, such as password security measures and fixing URL redirection vulnerabilities.<br /><br />
+                My final co-op was at Amazon Robotics where I worked on the direct to palletize team. I worked on integrating
+                a new hand scanner into our palletization software, mainly using Java. This project was piloted at 3 sites, 
+                where associate feedback was overwhelmingly positive and effiency increased by 15%.<br /><br />
+                When I am not coding, I can be found going to spin class, going camping, or chasing my cat, Booger. 
             </div>
         </NameBox>
     </Window>

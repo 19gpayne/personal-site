@@ -45,6 +45,18 @@ export const expand = keyframes`
   }
 `;
 
+export const blink = keyframes`
+    0% {
+        background-color: inherit; /* or any lighter color */
+    }
+    50% {
+        background-color: rgba(120, 120, 120, 0.7); /* or any darker color */
+    }
+    100% {
+        background-color: inherit; /* or the original color */
+    }
+`;
+
 export const WindowHeaderBar = ({label}) => (
       <ActionBar>
           <Inline>{label}</Inline>

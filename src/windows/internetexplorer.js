@@ -85,25 +85,24 @@ const MyComputer = () => (
             <div style={{padding: '10px'}}>
                 <Rectangle />
                 Gwendolyn&nbsp;Payne
+                <br />
+                <div style={{fontSize: '20px'}}>
+                    <a href="https://asset.cloudinary.com/dou0q4ekk/e2aeb305f04d0b9ba98997a2a446621b" target="_blank" rel="noreferrer">Click here for resume!</a>
+                </div>
             </div>
             <div style={{fontSize: '20px', padding: '10px', borderLeft: '1px solid gray'}}>
-                I am a fifth year student in the Honors program at Northeastern University, majoring in <b>Computer Science</b> with a 
+                I am an alumni of the honors program at Northeastern University, having majored in <b>Computer Science</b> with a 
                 concentration in human-centered computing. I am passionate about using technology to help others and 
                 facilitate accessibility. <br /><br />
-                In addition to being a student, I am currently working as a lead <b>front-end developer</b>
-                at <a href="https://www.tadpoletutoring.org">Tadpole Tutoring</a>, a tutoring software startup. I am currently
-                leading a team of 2 to add a new scheduling and payroll system. <br /><br />
-                I have also completed three co-ops, each as a full-stack developer.<br /><br />
-                My first co-op was at <a href="https://www.trustwillow.com">Willow</a>, a fintech startup focusing on making financial advising more accessible
-                to women and the new majority. I worked on creating a document sharing vault, video conferencing system,
-                and redesigned and implemented the coaching dashboard homepage. These were completed using 
-                React and Django.<br /><br />
-                My second co-op was at <a href="https://www.reprise.com">Reprise</a>, a demo software company, where I used Vue and Django. I worked on various visual redesigns, as well as
-                adding additional security measures, such as password security measures and fixing URL redirection vulnerabilities.<br /><br />
-                My final co-op was at <a href="https://amazon.jobs/en/teams/amazon-robotics">Amazon Robotics</a> where I worked on the direct to palletize team. I worked on integrating
-                a new hand scanner into our palletization software, mainly using Java. This project was piloted at 3 sites, 
-                where associate feedback was overwhelmingly positive and effiency increased by 15%.<br /><br />
-                When I am not coding, I can be found going to spin class, going camping, or chasing my cat, Booger. 
+
+                I'm currently working as a software development engineer at <a href="https://amazon.jobs/en/teams/amazon-robotics" target="_blank" rel="noreferrer">Amazon Robotics</a>.
+                I'm leading an initiative to integrate a more ergonomic handheld scanner into our put-to-light palletization technology. This project
+                has been piloted at 7 sites so far, resulting in a significant lift in efficiency and reduction in injuries. 
+                I also launched a new metadata sharing API to optimize sort allocations. Built using AWS API Gateway and Lambda, it is projected
+                to deliver double digit millions in savings over 3 years.
+                <br/><br />
+
+                When I am not coding, I can be found going to spin class, going camping, building a crossword, or chasing my cat, Booger. 
             </div>
         </NameBox>
     </Window>

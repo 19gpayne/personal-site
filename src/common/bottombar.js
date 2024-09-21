@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from "styled-components";
 
 import {AppstoreFilled} from '@ant-design/icons';
+import { blink } from '../windows/windowsstyledcomponents';
 
 const Window = styled.div`
     background-color: #d3d3d3;
@@ -36,6 +37,7 @@ const Inline = styled.div`
         border-left: revert;
         border-bottom: 2px solid #dbdbdb;
         border-right: 2px solid #dbdbdb;
+        
     }
     ${props => props.active !== false} {
         box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.2);
@@ -44,9 +46,12 @@ const Inline = styled.div`
         border-left: 2px solid #dadada;
         border-bottom: 2px solid gray;
     }
-    @media screen and (max-width: 1024px) {
-        cursor: pointer;
+    ${props => props.doBlink !== true} {
+        animation-name: ${blink};
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
     }
+    cursor: pointer;
 `;
 
 const InlineTab = styled.div`
@@ -61,18 +66,23 @@ const InlineTab = styled.div`
     background-color: #dddddd;
 `;
 
-const BottomBar = ({setMobileActive, active, tabNames}) => (
-    <Window>
-        <ActionBar>
-            <Inline active={active} onClick={() => {return setMobileActive(!active)}}><AppstoreFilled/> Start</Inline>
-            &nbsp;&nbsp;&nbsp;
-            {tabNames.map((t, i) => {
-                return (
-                    <InlineTab key={i}>&nbsp;{t}</InlineTab>
-                )
-            })}
-        </ActionBar>
-    </Window>
-);
+const BottomBar = ({setMobileActive, active, tabNames}) => {
+    const [hasNavigated, setHasNavigated] = useState(false);
+    return (
+        <>
+            <Window>
+                <ActionBar>
+                    <Inline active={active} doBlink={!active && window.location.pathname === "/" && !hasNavigated} onClick={() => {setMobileActive(!active); setHasNavigated(true)}}><AppstoreFilled/> Start</Inline>
+                    &nbsp;&nbsp;&nbsp;
+                    {tabNames.map((t, i) => {
+                        return (
+                            <InlineTab key={i}>&nbsp;{t}</InlineTab>
+                        )
+                    })}
+                </ActionBar>
+            </Window>
+        </>
+    )
+};
 
 export default BottomBar

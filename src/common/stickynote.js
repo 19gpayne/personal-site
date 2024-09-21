@@ -80,18 +80,14 @@ const Text = styled.div`
 
 export const StickyNoteLeft = ({color}) => (
     <NoteLeft color={color}>
-        <Text>Computer science student at Northeastern University</Text>
+        <Text>Fullstack Software Engineer @ Amazon Robotics</Text>
     </NoteLeft>
 );
 
 export const StickyNoteRight = ({color}) => (
     <NoteRight color={color}>
         <Text>
-            Web Developer
-            <br />
-            ---
-            <br />
-            Software Engineer
+            Northeastern Khoury College Alumni
         </Text>
     </NoteRight>
 );

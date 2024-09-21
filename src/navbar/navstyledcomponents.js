@@ -5,16 +5,9 @@ export const MobileMenu = styled.div`
     top: calc(100% - 250px);
     bottom: 46px;
     left: 2px;
-    right: 50%;
     z-index: 20;
-    @media screen and (min-width: 1025px) {
-        display: none !important;
-    }
-    // @media only screen and (max-width: 1024px) and (min-height: 1024px) and (min-width: 640px) {
-    //     display: none !important;
-    // }
     ${props => props.status !== true} {
-        display: block;
+        display: flex;
     }
     ${props => props.status !== false} {
         display: none;
@@ -38,17 +31,6 @@ export const NavSide = styled.div`
     @media screen and (max-width: 1024px) {
         display: none;
     }
-    // @media only screen and (max-width: 1024px) and (min-height: 1024px) and (min-width: 640px) {
-    //     display: flex;
-    //     top: 30px;
-    //     bottom: revert;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100px;
-    //     padding: 0;
-    //     justify-content: center;
-    //     align-items: center;
-    // }
     z-index: 2;
 `;
 
@@ -92,32 +74,20 @@ export const DesktopIcon = styled.div`
 
 export const NavButton = styled.div`
     padding: 5px;
-    @media only screen and (max-width: 1024px) and (min-height: 1024px) and (min-width: 640px) {
-        display: inline;
-    }
+    display: block;
 `;
 
 export const SideBarGray = styled.div`
-    @media screen and (min-width: 1025px) {
-        display: none !important;
-    }
-    @media only screen and (max-width: 1024px) and (min-height: 1024px) and (min-width: 640px) {
-        display: none !important;
-    }
+    width: 30px;
+    z-index: 21;
+    background-color: gray;
+    margin: 10px;
     ${props => props.status !== true} {
         display: block;
     }
     ${props => props.status !== false} {
         display: none;
     }
-    position: fixed;
-    top: calc(100% - 250px);
-    bottom: 46px;
-    left: 2px;
-    right: 85%;
-    z-index: 21;
-    background-color: gray;
-    margin: 10px;
 `;
 
 export const Label = styled.div`

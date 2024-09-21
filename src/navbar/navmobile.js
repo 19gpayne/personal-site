@@ -7,8 +7,9 @@ import {MobileMenu, MobileIcon, NavButton, SideBarGray} from './navstyledcompone
 
 const NavMobile = ({active}) => (
     <>
-        <SideBarGray status={active}/>
         <MobileMenu status={active}>
+            <SideBarGray status={active}/>
+            <div>
             {navList.main.map((d, i) => {
                 let status = "inactive";
                 if(window.location.pathname.split("/")[1] === d.href.split("/")[1]) {
@@ -22,6 +23,7 @@ const NavMobile = ({active}) => (
                     </NavButton>
                 )
             })}
+            </div>
         </MobileMenu>
     </>
 );        

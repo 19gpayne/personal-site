@@ -19,16 +19,16 @@ const navList = {
             href: "/about",
             icon: <><IeOutlined/></>
         },
-        {
-            label: <>Projects</>,
-            href: "/projects",
-            icon: <><FolderFilled/></>
-        },
-        {
-            label: <>Contact</>,
-            href: "/contact",
-            icon: <><MailFilled/></>
-        },
+        // {
+        //     label: <>Projects</>,
+        //     href: "/projects",
+        //     icon: <><FolderFilled/></>
+        // },
+        // {
+        //     label: <>Contact</>,
+        //     href: "/contact",
+        //     icon: <><MailFilled/></>
+        // },
     ]
 };
 
